@@ -3,13 +3,13 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Test");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
-	"top_multi",
+	"inner_left",
 	Array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
 		"DELAY" => "N",
-		"MAX_LEVEL" => "2",
-		"MENU_CACHE_GET_VARS" => array(0=>"",),
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(""),
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "N",
 		"MENU_CACHE_USE_GROUPS" => "Y",
