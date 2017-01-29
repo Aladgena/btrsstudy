@@ -43,7 +43,16 @@ IncludeTemplateLangFile(__FILE__);
 );?>
 			</div>
 		</div>
+		
 		<!--- // end header area --->
+		<div class="bc_breadcrumbs">
+			<ul>
+				<li><a href="">Каталог</a></li>
+				<li><a href="">Мебель</a></li>
+				<li><a href="">Выставки и события</a></li>
+			</ul>
+			<div class="clearboth"></div>
+		</div>
 		<div class="main_container page">
 			<div class="mn_container">
                 <div class="main_post">
