@@ -1,0 +1,32 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Пользователи");
+?>Раздел пользователей<br/><br/>
+<?
+$filter = Array
+(
+);
+
+$rsUsers = CUser::GetList(($by="personal_country"), ($order="desc"), $filter); // выбираем пользователей
+
+$is_filtered = $rsUsers->is_filtered; // отфильтрована ли выборка ?
+$rsUsers->NavStart(50); // разбиваем постранично по 50 записей
+//echo $rsUsers->NavPrint(GetMessage("PAGES")); // печатаем постраничную навигацию
+?>
+<table border="1" cellspacing="0" cellpadding="17" width="650">
+<?
+    <tr height="20">
+        <td align="center">ячейка 1</td>
+        <td align="center">ячейка 2</td>
+        <td align="center">ячейка 3</td>
+        <td align="center">ячейка 3</td>
+    </tr>
+</table>
+<?
+while($rsUsers->NavNext(true, "f_")) :
+    echo "[".$f_ID."]---(".$f_LOGIN.")---".$f_NAME."---".$f_LAST_NAME."<br>";	
+endwhile;
+
+?>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle(" Раздел инфоблока");
-?>Спортивный инвентарь<br>
- <?$APPLICATION->IncludeComponent(
+$APPLICATION->SetTitle("STUDY1");
+?>Спортсмены<br>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"",
 	Array(
@@ -19,14 +19,14 @@ $APPLICATION->SetTitle(" Раздел инфоблока");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
-		"DETAIL_ACTIVE_DATE_FORMAT" => "j F Y",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
 		"DETAIL_FIELD_CODE" => array("",""),
 		"DETAIL_PAGER_SHOW_ALL" => "Y",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "Страница",
-		"DETAIL_PROPERTY_CODE" => array("ARTICLE","TYPE","DESCRIPTION",""),
+		"DETAIL_PROPERTY_CODE" => array("TYPE_SPORT","AGE","FIRSTNAME","SECONDNAME",""),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -35,12 +35,12 @@ $APPLICATION->SetTitle(" Раздел инфоблока");
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "Y",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "5",
+		"IBLOCK_ID" => "6",
 		"IBLOCK_TYPE" => "study",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
-		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"LIST_FIELD_CODE" => array("",""),
-		"LIST_PROPERTY_CODE" => array("TYPE",""),
+		"LIST_PROPERTY_CODE" => array("FIRSTNAME","SECONDNAME",""),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -51,9 +51,9 @@ $APPLICATION->SetTitle(" Раздел инфоблока");
 		"PAGER_SHOW_ALL" => "Y",
 		"PAGER_SHOW_ALWAYS" => "Y",
 		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Спортинвентарь",
+		"PAGER_TITLE" => "Новости",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"SEF_FOLDER" => "/admin/razdel-infobloka/",
+		"SEF_FOLDER" => "/admin/",
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array("detail"=>"#ELEMENT_CODE#/","news"=>"","section"=>""),
 		"SET_LAST_MODIFIED" => "N",
@@ -73,5 +73,4 @@ $APPLICATION->SetTitle(" Раздел инфоблока");
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N"
 	)
-);?><br>
-<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

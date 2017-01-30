@@ -25,34 +25,29 @@ IncludeTemplateLangFile(__FILE__);
 	<div class="wrap">
 		<div class="hd_header_area">
 			<div class="hd_header">
-				<?$APPLICATION->IncludeComponent(
+			
+<?$APPLICATION->IncludeComponent(
 	"bitrix:menu",
-	"top_admin",
+	"top_adm",
 	Array(
 		"ALLOW_MULTI_SELECT" => "N",
 		"CHILD_MENU_TYPE" => "left",
+		"COMPONENT_TEMPLATE" => "top_adm",
 		"DELAY" => "N",
-		"MAX_LEVEL" => "3",
-		"MENU_CACHE_GET_VARS" => array(""),
+		"MAX_LEVEL" => "2",
+		"MENU_CACHE_GET_VARS" => array(),
 		"MENU_CACHE_TIME" => "3600",
 		"MENU_CACHE_TYPE" => "N",
 		"MENU_CACHE_USE_GROUPS" => "Y",
 		"ROOT_MENU_TYPE" => "top",
 		"USE_EXT" => "N"
 	)
-);?>
+);?>			
 			</div>
 		</div>
 		
 		<!--- // end header area --->
-		<div class="bc_breadcrumbs">
-			<ul>
-				<li><a href="">Каталог</a></li>
-				<li><a href="">Мебель</a></li>
-				<li><a href="">Выставки и события</a></li>
-			</ul>
-			<div class="clearboth"></div>
-		</div>
+		
 		<div class="main_container page">
 			<div class="mn_container">
                 <div class="main_post">

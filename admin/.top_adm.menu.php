@@ -1,35 +1,21 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"", 
-		"/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"WORK", 
+		"Раздел инфоблока", 
 		"/admin/razdel-infobloka/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"STUDY1", 
-		"/admin/study1.php", 
+		"WORK2", 
+		"/admin/work2.php", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"USERS", 
-		"/admin/users/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Сайт", 
+		"Публичная страница сайта", 
 		"/", 
 		Array(), 
 		Array(), 
@@ -38,6 +24,13 @@ $aMenuLinks = Array(
 	Array(
 		"Контакты", 
 		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"USERS", 
+		"/admin/users/", 
 		Array(), 
 		Array(), 
 		"" 
