@@ -1,6 +1,6 @@
 <?
 $sSectionName = "admin";
-$arDirProperties = Array(
+$arDirProperties = array(
    "description" => "Страница администратора",
    "keywords" => "admin",
    "title" => "admin"
