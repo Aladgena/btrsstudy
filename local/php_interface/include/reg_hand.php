@@ -1,17 +1,12 @@
 <?
 AddEventHandler("main", "OnBeforeUserRegister", "OnBeforeUserRegisterHandler");
-AddEventHandler("main", "OnAfterUserRegister", "blockyandexmail");
+AddEventHandler("main", "OnAfterUserRegister", "success_reg");
 
     function OnBeforeUserRegisterHandler(&$arFields)
     {
-		$rsUsers = CUser::GetList(($by="ID"), ($order="desc")); // выбираем пользователей
-		my_dump($rsUsers);
-		while($rsUsers->NavNext(true, "f_")) :
-			echo "[".$f_ID."]---(".$f_LOGIN.")---".$f_NAME."---".$f_LAST_NAME."<br>";
-		endwhile;
                 if (stripos($arFields["EMAIL"],'@mail.ru' )  === FALSE and (stripos($arFields["EMAIL"],'@list.ru' ) === FALSE ))
                 {
-                    echo 'SUCCESS';
+                    echo 'OKey';
 
                 }
                 else{
@@ -19,4 +14,30 @@ AddEventHandler("main", "OnAfterUserRegister", "blockyandexmail");
                     return false;
                 }
     }
+
+
+	function success_reg(&$arFields)
+    {
+        if (stripos($arFields["EMAIL"],'@yandex.ru' )  === false)
+            {
+/*
+$arFields = array(
+    "ID"          => 124,
+    "CONTRACT_ID" => 1,
+    "TYPE_SID"    => "LEFT"
+    );
+CEvent::Send("ADV_BANNER_STATUS_CHANGE", array("ru", "en"), $arFields);
+*/
+            $message = 'successful registration';
+            $arEventFields = array(
+                "ID" => 's1',
+                "MESSAGE" => $message,
+                "EMAIL_TO" => implode(",", $arFields['EMAIL']));
+            CEvent::Send("AFTER_REG", 's1', $arEventFields);
+            }
+        else{
+			echo 'Email from @yandex not send';
+        }
+    }
+
 ?>

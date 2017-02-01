@@ -1,10 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Страница админа");
-?>
-<?
-$a = array(2,3,4);
-my_dump($a);
-//reg_hand($a);
-?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+?><?$APPLICATION->IncludeComponent(
+	"s1:last.registered",
+	".default",
+Array()
+);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

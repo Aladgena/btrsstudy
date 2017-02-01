@@ -8,7 +8,7 @@ $APPLICATION->SetTitle("Пользователи");
 );
 */
 $rsUsers = CUser::GetList(($by="ID"), ($order="desc")); // выбираем пользователей
-my_dump($rsUsers);
+//my_dump($rsUsers);
 //$is_filtered = $rsUsers->is_filtered; // отфильтрована ли выборка ?
 
 ?>
