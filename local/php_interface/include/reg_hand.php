@@ -28,6 +28,11 @@ $arFields = array(
     );
 CEvent::Send("ADV_BANNER_STATUS_CHANGE", array("ru", "en"), $arFields);
 */
+// Очистка кеша
+//$cache = new CPHPCache;
+//$cache->ClearResultCache($additionalCacheID = False, $cachePath = False);
+
+
             $message = 'successful registration';
             $arEventFields = array(
                 "ID" => 's1',

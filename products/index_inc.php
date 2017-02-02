@@ -1,0 +1,1 @@
+<h3><?$APPLICATION->ShowTitle()?><?=$arParams["SET_TITLE"];?></h3><br>
